@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include <stdint.h>
+#include <inttypes.h>
 
 int64_t x = 0x1234F6789C011121LL;
 
-void bin_print(int i) {
+void bin_print(int i){
     // Temporary variables
     int k;
 
@@ -17,8 +17,7 @@ void bin_print(int i) {
 }
 
 
-
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[]){
     int i = 0xf1;
 
     printf("Original:  ");
@@ -31,22 +30,32 @@ int main(int argc, char *argv[]) {
         printf("\n");
     }
 
+    printf("\n");
+    rotateLeft(10,x);
+    printf("\n");
+    rotateRight(10,x);
+
     return 0;
 }
 
-void Ch(x, y, z){
+//https://www.geeksforgeeks.org/rotate-bits-of-an-integer/
 
+int rotateLeft(int n, __int64_t d){
+    for(int i=0;i<=n;i++){    
+        bin_print((d << i)|(i >> (sizeof(d) * 8 - d))); 
+        printf("\n");
+    }
 }
 
-void Maj(x, y, z){
+int rotateRight(int n, __int64_t d){ 
+    for(int i=0;i<=n;i++){    
+        bin_print((d >> i)|(i << (sizeof(d) * 8 - d))); 
+        printf("\n");
+    }
+} 
+
+void Ch(x,y,z){
 
 }
-
-void ROTL(x){
-
-}
-
-void ROTR(x){
-
-}
+void Maj(x,y,z){}
 
