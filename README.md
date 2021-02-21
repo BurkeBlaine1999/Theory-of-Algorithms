@@ -10,5 +10,3 @@ An introduction to the theory of algorithms, especially the areas of computation
 
 ## Acknowledgments
 [Ian McLoughlin ](https://github.com/ianmcloughlin) - Provided the task
-
-[IanStackoverflow](https://stackoverflow.com/) - Helped with debugging issues
