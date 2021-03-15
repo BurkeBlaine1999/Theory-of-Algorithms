@@ -6,12 +6,12 @@
 #define WORD uint32_t
 #define PF PRIX32
 
-#define CH(x,y,z) (x&y)^(~x&z)
-#define MAJ(x,y,z) (x&y)^(x&z)^(y&z)
-
 #define ROTL(x, n) (x<<n)|(x>>(W-n))
 #define ROTR(x, n) (x>>n)|(x<<(W-n))
 #define SHR(x,n) x>>n
+
+#define CH(x,y,z) (x&y)^(~x&z)
+#define MAJ(x,y,z) (x&y)^(x&z)^(y&z)
 
 #define SIG0(x) ROTR(x,2)^ROTR(x,13)^ROTR(x,22)
 #define SIG1(x) ROTR(x,6)^ROTR(x,11)^ROTR(x,25)
@@ -39,9 +39,14 @@ const WORD K[] = {
 
 //C Bitwise Operators : https://www.guru99.com/c-bitwise-operators.html
 
-WORD Ch(WORD x, WORD y, WORD z) {
-    return (x&y)^(~x&z);
-}
+// WORD Ch(WORD x, WORD y, WORD z) {
+//     return (x&y)^(~x&z);
+// }
+
+WORD H[] = {
+    0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a,
+    0x510e527f, 0x9b05688c, 0x1f83d9ab, 0x5be0cd19
+};
 
 int main(int argc, char *argv[]) {
     WORD x = 0x1234567;
