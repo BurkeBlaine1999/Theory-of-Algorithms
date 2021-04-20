@@ -2,8 +2,12 @@
 #include <inttypes.h>
 #include <byteswap.h>
 
+//I used the Secure Hash Standard paper to help me with converting from sha 256 to sha512.
+// ref: https://www.nist.gov/publications/secure-hash-standard
+
 // Endianess
 // ref: https://developer.ibm.com/technologies/systems/articles/au-endianc/
+
 const int _i = 1;
 #define islilend() ((*(char*)&_i) != 0)
 
@@ -13,7 +17,6 @@ const int _i = 1;
 #define BYTE uint8_t
 
 // Page 5 of Secure Hash Standard
-#define ROTL(x,n) ((x << n) | (x >> (WORD_LEN - n)))
 #define ROTR(x,n) ((x >> n) | (x << (WORD_LEN - n)))
 #define SHR(x,n) (x >> n)
 
@@ -116,6 +119,7 @@ int next_block(FILE *f, union Block *M, enum Status *S, uint64_t *nobits) {
     return 1;
 }
 
+
 int next_hash(union Block *M, WORD H[]) {
     // Message schedule
     WORD W[128];
@@ -159,6 +163,7 @@ int next_hash(union Block *M, WORD H[]) {
     return 0;
 }
 
+
 int sha512(FILE *f, WORD H[]) {
     // current message block
     union Block M;
@@ -173,6 +178,7 @@ int sha512(FILE *f, WORD H[]) {
     }
     return 0;
 }
+
 
 int main(int argc, char *argv[]) {
     // Initial hash values
