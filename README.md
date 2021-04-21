@@ -23,10 +23,6 @@ Hash algorithms ensure each bit of the output is dependent on each bit of the in
 
 However, there are also websites with extensive databases that have billions of hashes from many word lists available on the internet. If you encrypt a string such as 'Test', it will save the plain text and hash value so when you or another person attempts to decrypt the hash value of 'Text', it will simply pluck the value from the database.  [Click here for the website!](https://md5decrypt.net/en/Sha512/)
 
-
-
-
-
 ### Can you design an algorithm that, given enough time, will find input messages that give each of the possible 512-bit strings?
 Sha-512 is a secure hash function therefore knowing the hash value provides no useful information to us about the input. There are millions of possible outputs for sha-512 making it extremely difficult but not impossible. Using the birthday attack method and given enough time, there is a 100% chance of you finding the correct answer. Finding a collision using a birthday attack could take an extremely long time as there are 2^512 possible hash digests to get the correct input.
 
@@ -54,8 +50,10 @@ Here is a list of my used references for this question.
 
 ## Built With
 * [C](https://visualstudio.microsoft.com/vs/features/cplusplus/) - Language Used
+* [Visual Studio Code](https://code.visualstudio.com/) - Text Editor
+
 
 ## Acknowledgments
-[Ian McLoughlin ](https://github.com/ianmcloughlin) - Provided the Assignment
-
-
+[Ian McLoughlin ](https://github.com/ianmcloughlin) - Provided the Assignment.
+[Stackoverflow](https://stackoverflow.com/) - Used for research and debugging.
+[Quora](https://www.quora.com/) - Used for research.
