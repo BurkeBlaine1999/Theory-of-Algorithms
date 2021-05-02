@@ -7,14 +7,24 @@ SHA-512 is a hashing algorithm that performs a hashing function on some data giv
 ![Diagram](https://github.com/BurkeBlaine1999/Theory-of-Algorithms/blob/main/digram.png?raw=true )
 
 ## Running the Code
-* Navigate to the root directory of the project and enter command prompt.
-* Enter './sha512 FILENAME.txt' to run the code. 
+
+Navigate to the root directory of the repository and enter the command prompt.
+```
+> Enter 'make' to create an executable file 'sha512'
+```
+```
+> Enter './sha512 input.txt' to run the sha512 executable file. 
+```
 
 ### Command Line arguments
-* Navigate to the command prompt in the root directory of the project
-* Enter "make clean" - This will remove the Sha512 and test executable files.
-* Enter "make test" - This will test the Sha512 algorithm to ensure it is functioning correctly.
 
+Navigate to the command prompt in the root directory of the project
+```
+> Enter "make clean" - This will remove the Sha512 and test executable files.
+```
+```
+> Enter "make test" - This will test the Sha512 algorithm to ensure it is functioning correctly.
+```
 ## Questions
 ### Why can't we reverse the SHA512 algorithm to retrieve the original message from a hash digest?
 We are unable to reverse the SHA512 algorithm easily as hundreds of one-way operations take place sequentially and the results from earlier operations are used in later operations
@@ -42,10 +52,10 @@ Here is a list of my used references for this question.
 
 * [What data produces a SHA256 hash of all zero bits?](https://www.quora.com/What-data-produces-a-SHA256-hash-of-all-zero-bits?share=1)
 
+## Requirements   
+* Download [make](http://gnuwin32.sourceforge.net/packages/make.htm) for your windows.
 
-
-## Authors
-             
+## Authors            
 * **Blaine Burke** - [GitHub](https://github.com/BurkeBlaine1999)
 
 ## Built With
